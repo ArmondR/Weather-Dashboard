@@ -1,21 +1,22 @@
 
-var city = "";
+var city = "California";
+const apiKey = "2af1079754e3b24df48fc135fd674254";
 
-var getLatLng = function() {
-  var googleApiKey = "AIzaSyBkZZKfI_sFMjXqdyCOTguwYqvCrQlZfYg";
-  var googleApiUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=NewYork?&key=${googleApiKey}`;
+var lat = "";
+var lng = "";
+console.log(lat, lng);
 
-  fetch(googleApiUrl).then(function(response){
-    response.json().then(function(data){
-      console.log(data);
-    });
-  });
+
+var getLatLng = function(lat, lng) {
+  var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+
+  fetch(apiUrl);
+  
  };
 
 getLatLng();
 
 var getCurrentWeather = function() {
-    var apiKey = "2af1079754e3b24df48fc135fd674254";
     var apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid=${apiKey}`;
     
   fetch(apiUrl);
