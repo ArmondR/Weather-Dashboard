@@ -21,5 +21,5 @@ var getCurrentWeather = function() {
  };
 
 
-getLatLng;
+getLatLng();
  
