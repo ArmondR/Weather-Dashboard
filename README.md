@@ -15,9 +15,9 @@ The application was published through github and can be accessed via the provide
 
 ## Screenshots
 
-![schedule-past]()
+![]()
 
-![schedule-mixTime]()
+![]()
 
 ### License
 
