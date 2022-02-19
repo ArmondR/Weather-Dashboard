@@ -6,7 +6,7 @@ This application is a weather dasboard. The application is intended to show the 
 
 ##  Usage 
 
-The application was published through github and can be accessed via the provided link below. The application is unfinished and will be recieving updates in the future for completion. Thus far the application onlu provides current weather conditions for searched city.
+The application was published through github and can be accessed via the provided link below. The application is unfinished and will be recieving updates in the future for completion. Thus far the application provides current weather conditions and 5 day forecast for searched city. City History will be added in the future.
 
 
 [Link to Deployed Application](https://armondr.github.io/Weather-Dashboard/)
@@ -15,9 +15,9 @@ The application was published through github and can be accessed via the provide
 
 ## Screenshots
 
-![]()
+![](weather-dashboard-Houston.png)
 
-![]()
+![](WeatherDashboard.png)
 
 ### License
 
@@ -25,7 +25,7 @@ ______
 
 MIT License
 
-Copyright (c) [2021] [Armond Rodriguez]
+Copyright (c) [2022] [Armond Rodriguez]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

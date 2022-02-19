@@ -35,28 +35,23 @@
     </aside>
 <!-- current weather section -->
     <div class="results col-12 col-md-9 ">
-        <div class="row border">
-            <div id = "current-header" class="col-12 bg-light">
+        <div id ="current-container" class="row">
+            <div id = "current-header" class="col-12">
                 <h2 id="city-result"></h2>
                 <div id ="current-weather"></div>
             </div>
         </div>
 <!-- 5 say forecast section -->
-        <div class="row border">
-            <h3 class="col-12" id="forecas-type"></h3>
-            <div class="d-flex" id ="5-day-container">
-                <div class="col bg-dark m-2">col-1</div>
-                <div class="col bg-dark m-2">col-2</div>
-                <div class="col bg-dark m-2">col-3</div>
-                <div class="col bg-dark m-2">col-4</div>
-                <div class="col bg-dark m-2">col-5</div>
-            </div>  
+        <div class="row">
+            <h3 class="col-12" id="forecast-type"></h3>
+            <div class="d-flex forecast" id ="5-day-container"></div>  
         </div> 
     </div>
 </div>
 
 </main>
-   
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./Develop/JS/logic.js"></script> 
 </body>
 </html>

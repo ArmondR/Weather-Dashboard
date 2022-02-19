@@ -41,14 +41,23 @@
     width: 100%;
 }
 
- /* .container {
-    
-}  */
-
 .form-search {
 flex:2
 }
 
 .results {
 flex:4
+}
+
+.forecast-info {
+    font-size: 14px;
+}
+
+.weatherIcon {
+    width: 5vw;
+}
+
+#forecast-type {
+    font-size: 2vw;
+    font-weight: bold;
 }
