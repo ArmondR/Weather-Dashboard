@@ -17,7 +17,7 @@ var getLatLng = function(event) {
   // capture city Input to get lat and lon of searched city
   var city = document.querySelector("input[name='search-name']").value.trim();
 
-  var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+  var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
 
   fetch(apiUrl).then(function(response){
     response.json().then(function(data){
