@@ -9,13 +9,50 @@ var currentEl = document.querySelector("#current-weather");
 var forecastEl = document.querySelector(".forecast");
 var forecastHeaderEl = document.querySelector("#forecast-type");
 var currentcontainerEl = document.querySelector("#current-container");
+var historyEl = document.querySelector(".search-list");
+
+var addCityHistory = function(city) {
+  // holds value of city input
+  var cities;
+
+  // checks local storage to see if there is anything in it and if not create empty array to hold info
+  if(localStorage.getItem("history") !== null){
+    var historyString = localStorage.getItem("history");
+    cities = JSON.parse(historyString);
+  }else{
+    cities = [];
+  }
+  // adds city input to array
+  cities.push(city);
+  console.log (cities);
+
+  // saves array as a string to local storage with key as "history"
+  localStorage.setItem("history",JSON.stringify(cities));
+};
+
+var getCityHistory = function() {
+  // clears DOM list elements before creating new one 
+  historyEl.textContent = "";
+
+  var cities;
+  if(localStorage.getItem("history") !== null){
+    var historyString = localStorage.getItem("history");
+    cities = JSON.parse(historyString);
+  }else{
+    cities = [];
+  }
+
+  // loop through cities array and populates information into a list
+  for(var i = 0; i < cities.length; i++) {
+    var cityHistory = document.createElement("li");
+    cityHistory.textContent = cities[i];
+
+    historyEl.appendChild(cityHistory);
+  };
+};
 
 
-var getLatLng = function(event) {
-  event.preventDefault();
-
-  // capture city Input to get lat and lon of searched city
-  var city = document.querySelector("input[name='search-name']").value.trim();
+var getLatLng = function(city) {
 
   var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
 
@@ -145,6 +182,16 @@ console.log(data);
   };
 }
  
+// submit event listener
+ formEl.addEventListener("submit", function(event) {
+   event.preventDefault();
 
- formEl.addEventListener("submit", getLatLng);
+  var city = document.querySelector("input[name='search-name']").value.trim();
+  getLatLng(city);
+  addCityHistory(city);
+  getCityHistory();
+   });
+
+// loads whatever is saved in local storage to list element.
+   getCityHistory();
  
